@@ -1,53 +1,51 @@
 package com.springboot.mybatis.jvhuaxia.springbootmybatis.pojo;
 
-import java.util.StringJoiner;
-
 public class User {
 
-  private int id;
-  private String name;
-  private String password;
+    private int id;
+    private String name;
+    private int age;
+    private String email;
 
-  public User() {
+    public int getId() {
+        return id;
+    }
 
-  }
+    public void setId(int id) {
+        this.id = id;
+    }
 
-  public User(int id, String name, String password) {
-    this.id = id;
-    this.name = name;
-    this.password = password;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public int getId() {
-    return id;
-  }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-  public void setId(int id) {
-    this.id = id;
-  }
+    public int getAge() {
+        return age;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public void setAge(int age) {
+        this.age = age;
+    }
 
-  public void setName(String name) {
-    this.name = name;
-  }
+    public String getEmail() {
+        return email;
+    }
 
-  public String getPassword() {
-    return password;
-  }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-  public void setPassword(String password) {
-    this.password = password;
-  }
-
-  @Override
-  public String toString() {
-    return new StringJoiner(", ", User.class.getSimpleName() + "[", "]")
-        .add("id=" + id)
-        .add("name='" + name + "'")
-        .add("password='" + password + "'")
-        .toString();
-  }
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", age=" + age +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
